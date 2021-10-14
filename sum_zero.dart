@@ -12,6 +12,30 @@ void main() {
       [-2, 0, 1, 2, 3, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]));
   print('sumZero2() executed in ${stopwatch2.elapsed}');
   stopwatch2.stop();
+
+  Stopwatch stopwatch3 = Stopwatch()..start();
+  print(sumZero3(
+      [-2, 0, 1, 2, 3, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]));
+  print('sumZero3() executed in ${stopwatch3.elapsed}');
+  stopwatch3.stop();
+}
+
+List<int> sumZero3(List<int> sortedArray) {
+  int start = 0;
+  int end = sortedArray.length - 1;
+
+  while (start != end) {
+    int sum = sortedArray[start] + sortedArray[end];
+    if (sum == 0) {
+      return [sortedArray[start], sortedArray[end]];
+    } else if (sum < 0) {
+      start++;
+    } else {
+      end--;
+    }
+  }
+
+  return [];
 }
 
 List<int> sumZero2(List<int> sortedArray) {
