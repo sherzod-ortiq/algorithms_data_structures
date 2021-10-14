@@ -1,3 +1,4 @@
+// Count characters
 void main() {
   final stopwatch1 = Stopwatch()..start();
   print(countChars1(

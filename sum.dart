@@ -1,3 +1,4 @@
+// Sum numbers from 1 to n including n
 void main() {
   final stopwatch1 = Stopwatch()..start();
   print(sumIt(10000000));
