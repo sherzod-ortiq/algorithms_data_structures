@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 // Find the longest substring with distinct chars.
 void main() {
   print(findLongestSubstring(''));
@@ -7,6 +9,35 @@ void main() {
   print(findLongestSubstring('bbbbbb'));
   print(findLongestSubstring('longestsubstring'));
   print(findLongestSubstring('thisishowwedoit'));
+
+  print(findLongestSubstring1(''));
+  print(findLongestSubstring1('rithmschool'));
+  print(findLongestSubstring1('thisisawesome'));
+  print(findLongestSubstring1('thecatinthehat'));
+  print(findLongestSubstring1('bbbbbb'));
+  print(findLongestSubstring1('longestsubstring'));
+  print(findLongestSubstring1('thisishowwedoit'));
+}
+
+int findLongestSubstring1(String str) {
+  if (str.length <= 1) return str.length;
+
+  int start = 0;
+  int maxLength = 0;
+  // Will store the indexes where char occured
+  Map<String, int> seen = {};
+
+  for (int i = 0; i < str.length; i++) {
+    if (seen[str[i]] != null) {
+      start = math.max(start, seen[str[i]]!);
+    }
+
+    maxLength = math.max(maxLength, i - start + 1);
+
+    seen[str[i]] = i + 1;
+  }
+
+  return maxLength;
 }
 
 int findLongestSubstring(String str) {
