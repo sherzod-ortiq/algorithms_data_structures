@@ -35,14 +35,12 @@ void main() {
 }
 
 int productOfArray2(List<int> arr) {
-  if (arr.length == 0) return 0;
-  if (arr.length == 1) return arr[0];
+  if (arr.length == 0) return 1;
   return arr.last * productOfArray(arr.sublist(0, arr.length - 1));
 }
 
 int productOfArray1(List<int> arr) {
-  if (arr.length == 0) return 0;
-  if (arr.length == 1) return arr[0];
+  if (arr.length == 0) return 1;
   return arr.last * productOfArray(arr.take(arr.length - 1).toList());
 }
 
