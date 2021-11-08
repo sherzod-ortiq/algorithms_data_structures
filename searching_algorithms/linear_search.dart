@@ -1,4 +1,4 @@
-// Linear search
+// Linear search, will be working only with integers
 // Time complexity is O(N) - linear
 void main() {
   print(linearSearch([2, 5, 6, 7], 10));
