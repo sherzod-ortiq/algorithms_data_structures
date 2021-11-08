@@ -22,7 +22,7 @@ List<String> capitalizeFirst3(List<String> arr) {
   return help(arr.toList());
 }
 
-// Does not nodify original array
+// Does not modify original array
 List<String> capitalizeFirst2(List<String> arr) {
   if (arr.length == 0) return [];
   String str = arr[0][0].toUpperCase() + arr[0].substring(1);
