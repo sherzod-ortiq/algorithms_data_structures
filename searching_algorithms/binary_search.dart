@@ -1,5 +1,5 @@
 // Binary search, will be working only with integers
-
+// Time complexity is O(log n) - logarithmic
 void main() {
   print(binarySearch([1, 2, 4, 5, 6], 12));
   print(binarySearch([1, 2, 4, 5, 6], -12));
