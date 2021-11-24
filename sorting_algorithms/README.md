@@ -14,3 +14,9 @@ Time complexity Big O: best case is O(n^2) and the worst or average case is O(n^
 This algorithm just picks second element of array and compares it with the portion of array which is behind and inserts it in the right place there. Then it moves to the next element, the iteration continues unless the whole array is sorted. Insertion search is good when we use it for sorting **live (continuous) data**, because one side of the array is kept sorted putting new data in the right place does not need much computing.
 Time complexity Big O: best case is O(n) and the worst or average case is O(n^2).
 Space complexity: O(1).
+
+### Merge sort
+Merge sort was first conceived in 1948. It is the combination of splitting and sorting.
+Exploits the fact that arrays of 0 or 1 element are always sorted. This algorithms works by decomposing an array into smaller arrays of 0 or 1 elements, then building up newly sorted array. Time complexity Big O: best case is O(n * log(n)) and the worst or average case is O(n * log(n)).
+The log(n) because we have to split array untill the array legth is 1. The n because we have to perform array merge. Big O(n * log(n)) is the best time complexity for **data agnostic sorting algorithms**.
+Space complexity Big O: O(n).
