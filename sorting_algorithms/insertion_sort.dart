@@ -1,8 +1,17 @@
+import 'dart:math';
+
 // Insertion sort
 void main() {
-  List<int> arr1 = [5, 3, 9, -1];
-  print(insertionSort(arr1));
-  print(insertionSort2(arr1));
+  // List<int> arr1 = [5, 3, 9, -1];
+  // print(insertionSort(arr1));
+  // print(insertionSort2(arr1));
+
+  Random rng = Random();
+  List<int> randList = List.generate(100000, (_) => rng.nextInt(100000));
+  Stopwatch stopwatch1 = Stopwatch()..start();
+  insertionSort2(randList);
+  print('insertionSort2() executed in ${stopwatch1.elapsed}');
+  stopwatch1.stop();
 }
 
 List<int> insertionSort2(List<int> arr) {

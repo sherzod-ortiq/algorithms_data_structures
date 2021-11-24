@@ -1,5 +1,6 @@
-// Bubble sort
+import 'dart:math';
 
+// Bubble sort
 void main() {
   // print(bubbleSort([4, 5, 1, 0, -2]));
   // print(bubbleSort([10, 2, 1, 2, 0, 1]));
@@ -11,10 +12,17 @@ void main() {
   // print(bubbleSort2([]));
   // print(bubbleSort2([1]));
 
-  print(bubbleSort3([4, 5, 1, 0, -2]));
-  print(bubbleSort3([10, 2, 1, 2, 0, 1]));
-  print(bubbleSort3([]));
-  print(bubbleSort3([1]));
+  // print(bubbleSort3([4, 5, 1, 0, -2]));
+  // print(bubbleSort3([10, 2, 1, 2, 0, 1]));
+  // print(bubbleSort3([]));
+  // print(bubbleSort3([1]));
+
+  Random rng = Random();
+  List<int> randList = List.generate(100000, (_) => rng.nextInt(100000));
+  Stopwatch stopwatch1 = Stopwatch()..start();
+  bubbleSort3(randList);
+  print('bubbleSort3() executed in ${stopwatch1.elapsed}');
+  stopwatch1.stop();
 }
 
 // Optimized
